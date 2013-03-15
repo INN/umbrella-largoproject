@@ -1,0 +1,81 @@
+#content .jiffypost h2 {
+margin: 20px 0 10px 0;
+font-size: 22px;
+}
+
+#content .jiffypost img {
+border: 0;
+}
+
+.jiffypost {
+margin-bottom: 20px;
+padding-bottom: 20px;
+border-bottom: 1px solid #ddd;
+}
+
+/*temoprary hack until we can strip out extra WP markup */
+#content .jiffypost br {
+display: none;
+}
+
+#content .jiffypost blockquote {
+margin: 0;
+}
+
+#content .jiffypost ul {
+list-style-type: none;
+margin: 0;
+}
+
+#content .meta-gestures {
+width: 100%;
+}
+
+.embed-metadata {
+font-size: 10px;
+font-family: helvetica, arial, sans-serif;
+width: 140px;
+float: left;
+margin-top: 3px;
+min-height: 20px;
+}
+
+.embed-metadata li {
+margin-left: 25px;
+}
+
+.embed-metadata .jiffy-icon {
+margin-top: 1px;
+margin-left: 0;
+float: left;
+width: 16px;
+height: 16px;
+overflow: hidden;
+}
+
+.jiffy-source a {
+text-transform: uppercase;
+}
+
+.embedded-object {
+margin-left: 160px;
+margin-bottom: 30px;
+}
+
+.embedded-object p {
+font-size: 12px;
+margin-bottom: 5px;
+}
+
+.jiffy-link .embedded-object img {
+float: right;
+margin-left: 15px;
+border: 1px solid #ddd;
+}
+
+#content .jiffy-sourceurl {
+font-family: helvetica, arial, sans-serif;
+font-size: 11px;
+font-style: italic;
+font-weight: bold;
+}
