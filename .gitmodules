@@ -40,3 +40,6 @@
 [submodule "wp-content/themes/sirf"]
 	path = wp-content/themes/sirf
 	url = ssh://git@bitbucket.org/projectlargo/theme-sirf.git
+[submodule "wp-content/themes/c-hit"]
+	path = wp-content/themes/c-hit
+	url = https://bitbucket.org/projectlargo/theme-c-hit.git
