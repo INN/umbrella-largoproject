@@ -3,43 +3,43 @@
 	url = https://github.com/INN/Largo.git
 [submodule "wp-content/themes/youth-today"]
 	path = wp-content/themes/youth-today
-	url = git@bitbucket.org:projectlargo/theme-youth-today.git
+	url = https://bitbucket.org/projectlargo/theme-youth-today.git
 [submodule "wp-content/themes/fairwarning"]
 	path = wp-content/themes/fairwarning
-	url = git@bitbucket.org:projectlargo/theme-fairwarning.git
+	url = https://bitbucket.org/projectlargo/theme-fairwarning.git
 [submodule "wp-content/themes/fcir"]
 	path = wp-content/themes/fcir
-	url = git@bitbucket.org:projectlargo/theme-fcir.git
+	url = https://bitbucket.org/projectlargo/theme-fcir.git
 [submodule "wp-content/themes/gijn"]
 	path = wp-content/themes/gijn
-	url = git@bitbucket.org:projectlargo/theme-gijn.git
+	url = https://bitbucket.org/projectlargo/theme-gijn.git
 [submodule "wp-content/themes/ijec"]
 	path = wp-content/themes/ijec
-	url = git@bitbucket.org:projectlargo/theme-ijec.git
+	url = https://bitbucket.org/projectlargo/theme-ijec.git
 [submodule "wp-content/themes/iowawatch"]
 	path = wp-content/themes/iowawatch
-	url = git@bitbucket.org:projectlargo/theme-iowawatch.git
+	url = https://bitbucket.org/projectlargo/theme-iowawatch.git
 [submodule "wp-content/themes/jjie"]
 	path = wp-content/themes/jjie
-	url = git@bitbucket.org:projectlargo/theme-jjie.git
+	url = https://bitbucket.org/projectlargo/theme-jjie.git
 [submodule "wp-content/themes/maine"]
 	path = wp-content/themes/maine
-	url = git@bitbucket.org:projectlargo/theme-maine.git
+	url = https://bitbucket.org/projectlargo/theme-maine.git
 [submodule "wp-content/themes/midwestcenter"]
 	path = wp-content/themes/midwestcenter
-	url = git@bitbucket.org:projectlargo/theme-midwestcenter.git
+	url = https://bitbucket.org/projectlargo/theme-midwestcenter.git
 [submodule "wp-content/themes/necir"]
 	path = wp-content/themes/necir
-	url = git@bitbucket.org:projectlargo/theme-necir.git
+	url = https://bitbucket.org/projectlargo/theme-necir.git
 [submodule "wp-content/themes/oklahomawatch"]
 	path = wp-content/themes/oklahomawatch
-	url = git@bitbucket.org:projectlargo/theme-oklahomawatch.git
+	url = https://bitbucket.org/projectlargo/theme-oklahomawatch.git
 [submodule "wp-content/themes/wisconsinwatch"]
 	path = wp-content/themes/wisconsinwatch
-	url = git@bitbucket.org:projectlargo/theme-wisconsinwatch.git
+	url = https://bitbucket.org/projectlargo/theme-wisconsinwatch.git
 [submodule "wp-content/themes/sirf"]
 	path = wp-content/themes/sirf
-	url = ssh://git@bitbucket.org/projectlargo/theme-sirf.git
+	url = https://bitbucket.org/projectlargo/theme-sirf.git
 [submodule "wp-content/themes/c-hit"]
 	path = wp-content/themes/c-hit
 	url = https://bitbucket.org/projectlargo/theme-c-hit.git
