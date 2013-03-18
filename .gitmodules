@@ -1,6 +1,6 @@
 [submodule "wp-content/plugins/largo-extended"]
 	path = wp-content/plugins/largo-extended
-	url = https://drywall@bitbucket.org/projectlargo/largo-extended.git
+	url = git@bitbucket.org:projectlargo/largo-extended.git
 [submodule "wp-content/themes/largo"]
 	path = wp-content/themes/largo
 	url = https://github.com/INN/Largo.git
