@@ -43,6 +43,11 @@
 [submodule "wp-content/themes/c-hit"]
 	path = wp-content/themes/c-hit
 	url = https://bitbucket.org/projectlargo/theme-c-hit.git
+[submodule "wp-content/themes/aspen"]
+	path = wp-content/themes/aspen
+	url = https://bitbucket.org/projectlargo/theme-aspen.git
 [submodule "wp-content/plugins/largo-extended"]
 	path = wp-content/plugins/largo-extended
 	url = https://bitbucket.org/projectlargo/largo-extended.git
+
+
