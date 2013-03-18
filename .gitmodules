@@ -4,9 +4,6 @@
 [submodule "wp-content/themes/youth-today"]
 	path = wp-content/themes/youth-today
 	url = git@bitbucket.org:projectlargo/theme-youth-today.git
-[submodule "wp-content/themes/c-hit"]
-	path = wp-content/themes/c-hit
-	url = git@bitbucket.org:projectlargo/theme-c-hit.git
 [submodule "wp-content/themes/fairwarning"]
 	path = wp-content/themes/fairwarning
 	url = git@bitbucket.org:projectlargo/theme-fairwarning.git
