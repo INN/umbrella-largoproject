@@ -58,3 +58,6 @@
 [submodule "wp-content/plugins/argo-links"]
 	path = wp-content/plugins/argo-links
 	url = https://github.com/INN/argo-links.git
+[submodule "wp-content/plugins/largo-clean-contact"]
+	path = wp-content/plugins/largo-clean-contact
+	url = https://bitbucket.org/projectlargo/plugin-largo-clean-contact.git
