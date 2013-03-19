@@ -52,3 +52,6 @@
 [submodule "wp-content/themes/invw"]
 	path = wp-content/themes/invw
 	url = https://bitbucket.org/projectlargo/theme-invw.git
+[submodule "wp-content/plugins/navis-documentcloud"]
+	path = wp-content/plugins/navis-documentcloud
+	url = https://github.com/INN/navis-documentcloud.git
