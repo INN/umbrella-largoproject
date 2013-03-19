@@ -49,3 +49,6 @@
 [submodule "wp-content/themes/aspen"]
 	path = wp-content/themes/aspen
 	url = https://bitbucket.org/projectlargo/theme-aspen.git
+[submodule "wp-content/themes/invw"]
+	path = wp-content/themes/invw
+	url = https://bitbucket.org/projectlargo/theme-invw
