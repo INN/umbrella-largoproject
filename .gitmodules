@@ -48,3 +48,6 @@
 	url = https://bitbucket.org/projectlargo/largo-extended.git
 
 
+[submodule "wp-content/themes/aspen"]
+	path = wp-content/themes/aspen
+	url = https://bitbucket.org/projectlargo/theme-aspen.git
