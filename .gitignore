@@ -60,6 +60,7 @@ wp-content/mysql.sql
 /wp-content/index.php
 /wp-content/themes/*
 /wp-content/plugins/index.php
+/wp-content/plugins/*
 
 # large/disallowed file types
 # a CDN should be used for these
