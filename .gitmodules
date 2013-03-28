@@ -60,4 +60,13 @@
 	url = https://github.com/INN/argo-links.git
 [submodule "wp-content/plugins/largo-clean-contact"]
 	path = wp-content/plugins/largo-clean-contact
-	url = https://bitbucket.org/projectlargo/plugin-largo-clean-contact.git
+	url = https://github.com/INN/largo-clean-contact.git
+[submodule "wp-content/plugins/navis-jiffy-posts"]
+	path = wp-content/plugins/navis-jiffy-posts
+	url = https://github.com/INN/navis-jiffy-posts.git
+[submodule "wp-content/plugins/navis-media-credit"]
+	path = wp-content/plugins/navis-media-credit
+	url = https://github.com/INN/navis-media-credit.git
+[submodule "wp-content/plugins/navis-slideshows"]
+	path = wp-content/plugins/navis-slideshows
+	url = https://github.com/INN/navis-slideshows.git
