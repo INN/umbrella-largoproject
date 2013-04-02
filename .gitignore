@@ -110,4 +110,4 @@ wp-content/mysql.sql
 *.wmv
 *.avi
 
-.htaccess
+/.htaccess
