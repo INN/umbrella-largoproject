@@ -76,6 +76,7 @@ wp-content/mysql.sql
 /wp-content/plugins/simple-tags
 /wp-content/plugins/theme-check
 /wp-content/plugins/tinymce-advanced
+/wp-content/plugins/password-protected
 
 # large/disallowed file types
 # a CDN should be used for these
