@@ -70,3 +70,24 @@
 [submodule "wp-content/plugins/navis-slideshows"]
 	path = wp-content/plugins/navis-slideshows
 	url = https://github.com/INN/navis-slideshows.git
+[submodule "wp-content/themes/fearlessmedia"]
+	path = wp-content/themes/fearlessmedia
+	url = https://bitbucket.org/projectlargo/theme-fearlessmedia.git
+[submodule "wp-content/themes/montana"]
+	path = wp-content/themes/montana
+	url = https://bitbucket.org/projectlargo/theme-montana.git
+[submodule "wp-content/themes/fern"]
+	path = wp-content/themes/fern
+	url = https://bitbucket.org/projectlargo/theme-fern.git
+[submodule "wp-content/themes/gijc"]
+	path = wp-content/themes/gijc
+	url = https://bitbucket.org/projectlargo/theme-gijc.git
+[submodule "wp-content/themes/innovationtrail"]
+	path = wp-content/themes/innovationtrail
+	url = https://bitbucket.org/projectlargo/theme-innovationtrail.git
+[submodule "wp-content/themes/ohio"]
+	path = wp-content/themes/ohio
+	url = https://bitbucket.org/projectlargo/theme-ohio.git
+[submodule "wp-content/themes/raleigh"]
+	path = wp-content/themes/raleigh
+	url = https://bitbucket.org/projectlargo/theme-raleigh.git
