@@ -52,7 +52,6 @@ form#wpbdmsearchform a.advanced-search-link {
 #wpbdp-search-form input[type="submit"] {
     width: 100px;
     float: none;
-    display: block;
     margin: auto;
 }
 
@@ -144,6 +143,7 @@ form#wpbdmsearchform a.advanced-search-link {
 
 .wpbdp-listing-single .stickytag {
     float: right;
+    margin-top: -20px;
 }
 
 .wpbdp-listing-single .listing-title {
@@ -276,13 +276,15 @@ form#wpbdmsearchform a.advanced-search-link {
     margin-bottom: 20px;
 }
 
-.wpbdp-main-page ul.wpbdp-categories {
+ul.wpbdp-categories {
     margin: 0 0 10px 15px;
+    padding: 0 10px;
 }
 
-.wpbdp-main-page ul.wpbdp-categories > li {
+ul.wpbdp-categories > li {
     width: 50%;
     float: left;
+    margin: 0;
 }
 
 /* submit listing page */
@@ -308,6 +310,10 @@ form#wpbdmsearchform a.advanced-search-link {
     font-size: 90%;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.wpbdp-form-field.image a.delete {
+    margin-left: 10px;
 }
 
 ul.validation-errors {
@@ -350,6 +356,13 @@ ul.validation-errors li {
     color: #ff0000;
 }
 
+.wpbdp-submit-page .upgrade-to-featured-option {
+    border: solid 1px #666;
+    padding: 5px 10px;
+    margin: 25px 0 25px 0;
+    font-size: 90%;
+}
+
 /* error and status messages */
 .wpbdp-msg {
     font-size: 85%;
@@ -367,3 +380,42 @@ ul.validation-errors li {
 }
 
 /*.wpbusdirmanerroralert { color:#ff0000;font-weight:bold;font-size:14px; }*/
+
+.wpbdp-submit-page .fee-options .fee-option .fee-label {
+    font-weight: bold;
+}
+
+.wpbdp-submit-page .fee-options .fee-description {
+    font-size: 90%;
+    color: #666;
+}
+
+/* credits footer */
+.wpbdp-credit-info {
+    font-size: 9px;
+    text-align: center;
+    color: #494949;
+}
+
+.wpbdp-credit-info a {
+    color: inherit;
+}
+
+#wpbdp-renewal-page .do-not-renew-listing {
+    margin: 40px 0;
+    border: solid 1px #eee;
+    font-size: 95%;
+}
+
+#wpbdp-renewal-page .do-not-renew-listing .header {
+    background: #bc0b0b;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 2px 0;
+}
+
+#wpbdp-renewal-page .do-not-renew-listing input[type="submit"] {
+    /*border: solid 1px #bc0b0b;*/
+    color: #900000;
+}

@@ -251,16 +251,6 @@ function wpbdp_getv($dict, $key, $default=false) {
 	return $default;
 }
 
-function wpbdp_render_attributes($attrs) {
-    $attributes = array();
-    foreach ($attrs as $name => $value) {
-        if (is_array($value))
-            $value = join(' ', array_filter($value, 'strlen'));
-        $attributes[] = sprintf('%s="%s"', $name, esc_attr($value));
-    }
-    return join(' ', $attributes);
-}
-
 function wpbdp_render_page($template, $vars=array(), $echo_output=false) {
 	if ($vars) {
 		extract($vars);
@@ -413,4 +403,48 @@ function wpbdp_ajaxurl($overwrite=false) {
     }
 
     return $ajaxurl;
+}
+
+/**
+ * Removes a value from an array.
+ * @since 2.3
+ */
+function wpbdp_array_remove_value( &$array_, &$value_ ) {
+	$key = array_search( $value_, $array_ );
+
+	if ( $key !== false ) {
+		unset( $array_[$key] );
+	}
+
+	return true;
+}
+
+/**
+ * Checks if a given string starts with another string.
+ * @param string $str the string to be searched
+ * @param string $prefix the prefix to search for
+ * @return TRUE if $str starts with $prefix or FALSE otherwise
+ * @since 3.0.3
+ */
+function wpbdp_starts_with( $str, $prefix, $case_sensitive=true ) {
+	if ( !$case_sensitive )
+		return stripos( $str, $prefix, 0 ) === 0;
+
+	return strpos( $str, $prefix, 0 ) === 0;
+}
+
+/**
+ * @since 3.1
+ */
+function wpbdp_format_time( $time, $format='mysql', $time_is_date=false ) {
+	// TODO: add more formats
+	switch ( $format ) {
+		case 'mysql':
+			return date( 'Y-m-d H:i:s', $time );
+			break;
+		default:
+			break;
+	}
+
+	return $time;
 }
