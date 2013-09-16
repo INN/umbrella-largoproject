@@ -91,3 +91,6 @@
 [submodule "wp-content/themes/raleigh"]
 	path = wp-content/themes/raleigh
 	url = https://bitbucket.org/projectlargo/theme-raleigh.git
+[submodule "wp-content/plugins/argo-audio-player"]
+	path = wp-content/plugins/argo-audio-player
+	url = https://github.com/INN/argo-audio-player.git
