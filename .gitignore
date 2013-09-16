@@ -60,7 +60,11 @@ wp-content/debug.log
 /xmlrpc.php
 /wp-admin
 /wp-includes
+
+# don't version the themes/plugins we don't care about
 /wp-content/index.php
+/wp-content/sunrise.php
+/wp-content/Icon
 /wp-content/themes/*
 /wp-content/plugins/index.php
 /wp-content/plugins/akismet
@@ -80,7 +84,9 @@ wp-content/debug.log
 /wp-content/plugins/tinymce-advanced
 /wp-content/plugins/password-protected
 /wp-content/plugins/ad-code-manager
-/wp-content/plugins/argo-audio-player
+/wp-content/plugins/liveblog
+/wp-content/plugins/wp-help
+/wp-content/plugins/tweetable-text
 
 # large/disallowed file types
 # a CDN should be used for these
