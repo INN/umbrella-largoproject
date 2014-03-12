@@ -4,12 +4,6 @@
 [submodule "wp-content/themes/youth-today"]
 	path = wp-content/themes/youth-today
 	url = https://bitbucket.org/projectlargo/theme-youth-today.git
-[submodule "wp-content/themes/fairwarning"]
-	path = wp-content/themes/fairwarning
-	url = https://bitbucket.org/projectlargo/theme-fairwarning.git
-[submodule "wp-content/themes/fcir"]
-	path = wp-content/themes/fcir
-	url = https://bitbucket.org/projectlargo/theme-fcir.git
 [submodule "wp-content/themes/gijn"]
 	path = wp-content/themes/gijn
 	url = https://bitbucket.org/projectlargo/theme-gijn.git
@@ -70,18 +64,12 @@
 [submodule "wp-content/plugins/navis-slideshows"]
 	path = wp-content/plugins/navis-slideshows
 	url = https://github.com/INN/navis-slideshows.git
-[submodule "wp-content/themes/fearlessmedia"]
-	path = wp-content/themes/fearlessmedia
-	url = https://bitbucket.org/projectlargo/theme-fearlessmedia.git
 [submodule "wp-content/themes/montana"]
 	path = wp-content/themes/montana
 	url = https://bitbucket.org/projectlargo/theme-montana.git
 [submodule "wp-content/themes/fern"]
 	path = wp-content/themes/fern
 	url = https://bitbucket.org/projectlargo/theme-fern.git
-[submodule "wp-content/themes/gijc"]
-	path = wp-content/themes/gijc
-	url = https://bitbucket.org/projectlargo/theme-gijc.git
 [submodule "wp-content/themes/innovationtrail"]
 	path = wp-content/themes/innovationtrail
 	url = https://bitbucket.org/projectlargo/theme-innovationtrail.git
