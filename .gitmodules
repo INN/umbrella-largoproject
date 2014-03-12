@@ -82,3 +82,33 @@
 [submodule "wp-content/plugins/argo-audio-player"]
 	path = wp-content/plugins/argo-audio-player
 	url = https://github.com/INN/argo-audio-player.git
+[submodule "wp-content/themes/chicago-reporter"]
+	path = wp-content/themes/chicago-reporter
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-chicago-reporter.git
+[submodule "wp-content/themes/cpipr"]
+	path = wp-content/themes/cpipr
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-cpipr.git
+[submodule "wp-content/themes/impaqme"]
+	path = wp-content/themes/impaqme
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-impaqme.git
+[submodule "wp-content/themes/inews"]
+	path = wp-content/themes/inews
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-inews.git
+[submodule "wp-content/themes/kentucky"]
+	path = wp-content/themes/kentucky
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-kycir.git
+[submodule "wp-content/themes/largoproject"]
+	path = wp-content/themes/largoproject
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-largoproject.git
+[submodule "wp-content/themes/laschoolreport"]
+	path = wp-content/themes/laschoolreport
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-laschoolreport.git
+[submodule "wp-content/themes/nmindepth"]
+	path = wp-content/themes/nmindepth
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-nmindepth.git
+[submodule "wp-content/themes/teenvoices"]
+	path = wp-content/themes/teenvoices
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-teenvoices.git
+[submodule "wp-content/themes/voice-of-oc"]
+	path = wp-content/themes/voice-of-oc
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-voice-of-oc.git
