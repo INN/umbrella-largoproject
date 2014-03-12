@@ -65,7 +65,7 @@ wp-content/debug.log
 /wp-content/index.php
 /wp-content/sunrise.php
 /wp-content/Icon
-#/wp-content/themes/*
+/wp-content/themes/*
 /wp-content/plugins/index.php
 /wp-content/plugins/akismet
 /wp-content/plugins/bwp-google-xml-sitemaps
