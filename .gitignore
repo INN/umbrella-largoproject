@@ -5,6 +5,8 @@
 *.bak
 *.swp
 Thumbs.db
+Capfile
+/config
 
 # wordpress specific
 wp-config.php
