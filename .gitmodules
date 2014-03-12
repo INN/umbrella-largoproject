@@ -115,3 +115,6 @@
 [submodule "wp-content/themes/ctmirror"]
 	path = wp-content/themes/ctmirror
 	url = https://github.com/drywall/ctmirror.git
+[submodule "wp-content/themes/newsdesk"]
+	path = wp-content/themes/newsdesk
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-newsdesk.git
