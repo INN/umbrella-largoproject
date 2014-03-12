@@ -118,3 +118,6 @@
 [submodule "wp-content/themes/newsdesk"]
 	path = wp-content/themes/newsdesk
 	url = https://aschweigert@bitbucket.org/projectlargo/theme-newsdesk.git
+[submodule "wp-content/themes/lensnola"]
+	path = wp-content/themes/lensnola
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-lensnola.git
