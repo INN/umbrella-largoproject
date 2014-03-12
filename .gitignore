@@ -68,29 +68,7 @@ wp-content/debug.log
 /wp-content/sunrise.php
 /wp-content/Icon
 /wp-content/themes/*
-/wp-content/plugins/index.php
-/wp-content/plugins/akismet
-/wp-content/plugins/bwp-google-xml-sitemaps
-/wp-content/plugins/caspio-deploy2
-/wp-content/plugins/chartbeat
-/wp-content/plugins/co-authors-plus
-/wp-content/plugins/csv-user-import
-/wp-content/plugins/disqus-comment-system
-/wp-content/plugins/edit-flow
-/wp-content/plugins/hyperdb
-/wp-content/plugins/qa
-/wp-content/plugins/redirection
-/wp-content/plugins/regenerate-thumbnails
-/wp-content/plugins/simple-tags
-/wp-content/plugins/theme-check
-/wp-content/plugins/tinymce-advanced
-/wp-content/plugins/password-protected
-/wp-content/plugins/ad-code-manager
-/wp-content/plugins/liveblog
-/wp-content/plugins/wp-help
-/wp-content/plugins/tweetable-text
-/wp-content/plugins/business-directory-plugin
-
+/wp-content/plugins/*
 
 # large/disallowed file types
 # a CDN should be used for these
