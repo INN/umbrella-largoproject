@@ -168,10 +168,10 @@ class WPBDP_FormFieldType {
                                   implode( ' ', $field->css_classes),
                                   $html_attributes );
                 $html .= '<div class="wpbdp-form-field-label">';
-                $html .= sprintf( '<label for="%s">%s</label>', 'wpbdp-field-' . $field->get_id(), esc_html( $field->get_label() ) );
+                $html .= sprintf( '<label for="%s">%s</label>', 'wpbdp-field-' . $field->get_id(), $field->get_label() );
 
                 if ( $field->get_description() )
-                    $html .= sprintf( '<span class="field-description">(%s)</span>', esc_html( $field->get_description() ) );
+                    $html .= sprintf( '<span class="field-description">(%s)</span>', $field->get_description() );
 
                 $html .= '</div>';
                 $html .= '<div class="wpbdp-form-field-html wpbdp-form-field-inner">';
@@ -196,7 +196,7 @@ class WPBDP_FormFieldType {
     public function cleanup( &$field ) {
         if ( $field->get_association() == 'meta' ) {
             global $wpdb;
-            $wpdb->query( $wpdb->prepare( "DELETE * FROM {$wpdb->postmeta} WHERE meta_key = %s", '_wpbdp[fields][' . $field->get_id() . ']' ) );
+            $wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->postmeta} WHERE meta_key = %s", '_wpbdp[fields][' . $field->get_id() . ']' ) );
         }
 
 
@@ -566,7 +566,8 @@ class WPBDP_FormField {
     }
 
     public function store_value( $post_id, $value ) {
-        return $this->type->store_field_value( $this, $post_id, $value );
+        $this->type->store_field_value( $this, $post_id, $value );
+        do_action_ref_array( 'wpbdp_form_field_store_value', array( &$this, $post_id, $value ) );
     }
 
     public function is_empty_value( $value ) {
@@ -654,6 +655,10 @@ class WPBDP_FormField {
                     return new WP_Error( 'wpbdp-field-error', sprintf( _x( 'There can only be one field with association "%s". Please select another association.', 'form-fields-api', 'WPBDM' ), $this->association ) );
                 }
             }
+        }
+
+        if ( in_array( 'required', $flags ) ) {
+            $this->add_validator( 'required' );
         }
 
       if ( !in_array( $this->type->get_id(), $wpbdp->formfields->get_association_field_types( $this->association ) ) ) {
@@ -1088,7 +1093,7 @@ class WPBDP_FormFields {
             $name = str_replace( array( ',', ';' ), '', $name );
             $name = str_replace( array( ' ', '/' ), '-', $name );
 
-            if ( $name == 'images' || $name == 'image' || $name == 'username' || in_array( $name, $names, true ) ) {
+            if ( $name == 'images' || $name == 'image' || $name == 'username' || $name == 'featured_level' || $name == 'expires_on' || in_array( $name, $names, true ) ) {
                 $name = $field->get_id() . '/' . $name;
             }
             

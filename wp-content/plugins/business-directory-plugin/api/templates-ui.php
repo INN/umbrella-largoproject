@@ -31,16 +31,15 @@ function wpbdp_the_directory_categories() {
  * @access private
  */
 function _wpbdp_padded_count( &$term ) {
-    $count = intval( $term->count );
+    global $wpdb;
+    
+    $tree_ids = array_merge( array( $term->term_id ), get_term_children( $term->term_id, WPBDP_CATEGORY_TAX ) );
+    $tt_ids = $wpdb->get_col( $wpdb->prepare( "SELECT term_taxonomy_id FROM {$wpdb->term_taxonomy} WHERE term_id IN (" . implode( ',', $tree_ids ) . ") AND taxonomy = %s", WPBDP_CATEGORY_TAX ) );
 
-    if ( $children = get_term_children( $term->term_id, WPBDP_CATEGORY_TAX ) ) {
-        foreach ( $children as $c_id ) {
-            $c = get_term( $c_id, WPBDP_CATEGORY_TAX );
-            $count += intval( apply_filters( '_wpbdp_padded_count_child', $c->count, $c ) );
-        }
-    }
-
-    $term->count = apply_filters( '_wpbdp_padded_count', $count, $term, $children ? true : false );
+    $query = $wpdb->prepare( "SELECT COUNT(DISTINCT r.object_id) FROM {$wpdb->term_relationships} r INNER JOIN {$wpdb->posts} p ON p.ID = r.object_id WHERE p.post_status = %s and p.post_type = %s AND term_taxonomy_id IN (" . implode( ',', $tt_ids ) . ")", 'publish', WPBDP_POST_TYPE );
+    $count = intval( $wpdb->get_var( $query ) );
+    
+    $term->count = apply_filters( '_wpbdp_padded_count', $count, $term );
 }
 
 /**
@@ -48,18 +47,24 @@ function _wpbdp_padded_count( &$term ) {
  * @access private
  */
 function _wpbdp_list_categories_walk( $parent=0, $depth=0, $args ) {
-    $terms = get_terms( WPBDP_CATEGORY_TAX,
+    $term_ids = get_terms( WPBDP_CATEGORY_TAX,
                         array( 'orderby' => $args['orderby'],
                                'order' => $args['order'],
                                'hide_empty' => false,
-                               'pad_counts' => true,
-                               'parent' => is_object( $args['parent'] ) ? $args['parent']->term_id : intval( $args['parent'] ) )
+                               'pad_counts' => false,
+                               'parent' => is_object( $args['parent'] ) ? $args['parent']->term_id : intval( $args['parent'] ),
+                               'fields' => 'ids' )
                         );
     
-    // 'pad_counts' doesn't work because of WP bug #15626 (see http://core.trac.wordpress.org/ticket/15626).
-    // we need a workaround until the bug is fixed.        
-    foreach ( $terms as &$t )
+    $terms = array();
+    foreach ( $term_ids as $term_id ) {
+        $t = get_term( $term_id, WPBDP_CATEGORY_TAX );
+        // 'pad_counts' doesn't work because of WP bug #15626 (see http://core.trac.wordpress.org/ticket/15626).
+        // we need a workaround until the bug is fixed.        
         _wpbdp_padded_count( $t );
+
+        $terms[] = $t;
+    }
 
     // filter empty terms
     if ( $args['hide_empty'] ) {
@@ -69,7 +74,8 @@ function _wpbdp_list_categories_walk( $parent=0, $depth=0, $args ) {
     $html = '';
 
     if ( !$terms && $depth == 0 ) {
-        $html .= '<p>' . _x( 'No listing categories found.', 'templates', 'WPBDM' ) . '</p>';
+        if ( $args['no_items_msg'] )
+            $html .= '<p>' . $args['no_items_msg'] . '</p>';
         return $html;
     }
 
@@ -82,7 +88,7 @@ function _wpbdp_list_categories_walk( $parent=0, $depth=0, $args ) {
     }
 
     foreach ( $terms as &$term ) {
-        $html .= '<li class="cat-item cat-item-' . $term->term_id . ' ' . apply_filters( 'wpbdp_categories_list_item_css', '', $term ) . '">';
+        $html .= '<li class="cat-item cat-item-' . $term->term_id . ' ' . apply_filters( 'wpbdp_categories_list_item_css', '', $term ) . ' ' . ( $depth > 0 ? 'subcat' : '' ) . '">';
 
         $item_html = '';
         $item_html .= '<a href="' . esc_url( get_term_link( $term ) ) . '" ';
@@ -99,7 +105,8 @@ function _wpbdp_list_categories_walk( $parent=0, $depth=0, $args ) {
 
         if ( !$args['parent_only'] ) {
             $args['parent'] = $term->term_id;
-            $html .= _wpbdp_list_categories_walk( $term->term_id, $depth + 1, $args );
+            if ( $subcats = _wpbdp_list_categories_walk( $term->term_id, $depth + 1, $args ) )
+                $html .= $subcats;
         }
 
         $html .= '</li>';
@@ -125,6 +132,7 @@ function _wpbdp_list_categories_walk( $parent=0, $depth=0, $args ) {
  *      'hide_empty' (boolean) default is False - Whether to hide empty categories or not.
  *      'parent_only' (boolean) default is False - Whether to show only direct childs of 'parent' or make a recursive list.
  *      'echo' (boolean) default is False - If True, the list will be printed in addition to returned by this function.
+ *      'no_items_msg' (string) default is "No listing categories found." - Message to display when no categories are found.
  *
  * @param string|array $args array of arguments to be used while creating the list.
  * @return string HTML output.
@@ -140,13 +148,17 @@ function wpbdp_list_categories( $args=array() ) {
         'show_count' => wpbdp_get_option('show-category-post-count'),
         'hide_empty' => false,
         'parent_only' => false,
-        'parent' => 0
+        'parent' => 0,
+        'no_items_msg' => _x( 'No listing categories found.', 'templates', 'WPBDM' )
     ) );
 
     $html  =  '';
-    $html .= '<ul class="wpbdp-categories ' . apply_filters( 'wpbdp_categories_list_css', '' )  . '">';
-    $html .= _wpbdp_list_categories_walk( 0, 0, $args );
-    $html .= '</ul>';
+
+    if ( $categories = _wpbdp_list_categories_walk( 0, 0, $args ) ) {
+        $html .= '<ul class="wpbdp-categories ' . apply_filters( 'wpbdp_categories_list_css', '' )  . '">';
+        $html .= $categories;
+        $html .= '</ul>';
+    }
 
     $html = apply_filters( 'wpbdp_categories_list', $html );
 
@@ -158,7 +170,6 @@ function wpbdp_list_categories( $args=array() ) {
 
 function wpbdp_main_links() {
     $html  = '';
-    $html .= '<div class="wpbdp-main-links">';
 
     if (wpbdp_get_option('show-submit-listing')) {
         $html .= sprintf('<input id="wpbdp-bar-submit-listing-button" type="button" value="%s" onclick="window.location.href = \'%s\'" class="button" />',
@@ -189,7 +200,8 @@ function wpbdp_main_links() {
                         );*/
     }
 
-    $html .= '</div>';
+    if ( $html )
+        $html = '<div class="wpbdp-main-links">' . $html . '</div>';
 
     return $html;
 }
@@ -239,12 +251,15 @@ function wpbdp_listing_sort_options() {
     $html .= _x('Sort By:', 'templates sort', 'WPBDM') . ' ';
 
     foreach ($sort_options as $id => $option) {
-        $html .= sprintf('<span class="%s %s"><a href="%s">%s</a> %s</span>',
+        $default_order = isset( $option[2] ) && !empty( $option[2] ) ? strtoupper( $option[2] ) : 'ASC';
+
+        $html .= sprintf('<span class="%s %s"><a href="%s" title="%s">%s</a> %s</span>',
                         $id,
                         ($current_sort && $current_sort->option == $id) ? 'current': '',
-                        ($current_sort && $current_sort->option == $id) ? add_query_arg('wpbdp_sort', ($current_sort->order == 'ASC' ? '-' : '') . $id) : add_query_arg('wpbdp_sort', $id),
+                        ($current_sort && $current_sort->option == $id) ? add_query_arg('wpbdp_sort', ($current_sort->order == 'ASC' ? '-' : '') . $id) : add_query_arg('wpbdp_sort', ( $default_order == 'DESC' ? '-' : '' )  . $id ),
+                        isset( $option[1] ) && !empty( $option[1] ) ? esc_attr( $option[1] ) : esc_attr( $option[0] ),
                         $option[0],
-                        ($current_sort && $current_sort->option == $id) ? ($current_sort->order == 'ASC' ? '↑' : '↓') : '↑'
+                        ($current_sort && $current_sort->option == $id) ? ($current_sort->order == 'ASC' ? '↑' : '↓') : ( $default_order == 'DESC' ? '↓' : '↑' )
                         );
         $html .= ' | ';
     }
@@ -252,7 +267,7 @@ function wpbdp_listing_sort_options() {
     $html .= '<br />';
 
     if ($current_sort)
-        $html .= sprintf('(<a href="%s" class="reset">Reset</a>)', remove_query_arg('wpbdp_sort'));
+        $html .= sprintf( '(<a href="%s" class="reset">%s</a>)', remove_query_arg( 'wpbdp_sort' ), _x( 'Reset', 'sort', 'WPBDM' ) );
     $html .= '</div>';
 
     return $html;
@@ -355,8 +370,9 @@ function wpbdp_listing_thumbnail( $listing_id=null, $args=array() ) {
         if ( !$image_link ) {
             return $image_img;
         } else {
-            return sprintf( '<div class="listing-thumbnail"><a href="%s" class="%s">%s</a></div>',
+            return sprintf( '<div class="listing-thumbnail"><a href="%s" class="%s" rel="%s">%s</a></div>',
                             $image_link,
+                            $args['link'] == 'picture' ? 'lightbox' : '',
                             $args['link'] == 'picture' ? 'thickbox lightbox fancybox' : '',
                             $image_img );
         }
@@ -383,8 +399,10 @@ function wpbdp_listing_contact_form ( $listing_id=0, $validation_errors=array() 
 
     if ( wpbdp_get_option( 'recaptcha-on' ) ) {
         if ( $public_key = wpbdp_get_option( 'recaptcha-public-key' ) ) {
-            require_once( WPBDP_PATH . 'recaptcha/recaptchalib.php' );
-            $recaptcha = recaptcha_get_html( $public_key );
+            if ( !function_exists( 'recaptcha_get_html' ) )
+                require_once( WPBDP_PATH . 'libs/recaptcha/recaptchalib.php' );
+            
+            $recaptcha = recaptcha_get_html( $public_key );            
         }
     }
 

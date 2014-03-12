@@ -232,7 +232,7 @@ class WPBDP_FieldTypes_Select extends WPBDP_FormFieldType {
                         'orderby' => wpbdp_get_option( 'categories-order-by' ),
                         'selected' => ( $this->is_multiple() ? null : ( $value ? $value[0] : null ) ),
                         'order' => wpbdp_get_option('categories-sort' ),
-                        'hide_empty' => 0,
+                        'hide_empty' => $context == 'search' && wpbdp_get_option( 'hide-empty-categories' ) ? 1 : 0,
                         'hierarchical' => 1,
                         'echo' => 0,
                         'id' => 'wpbdp-field-' . $field->get_id(),
@@ -261,6 +261,11 @@ class WPBDP_FieldTypes_Select extends WPBDP_FormFieldType {
                               'inselect',
                               $field->is_required() ? 'required' : '');
 
+            if ( $field->data( 'empty_on_search' ) && $context == 'search' ) {
+                $html .= sprintf( '<option value="-1">%s</option>',
+                                  _x( '-- Choose One --', 'form-fields-api category-select', 'WPBDM' ) );
+            }
+
             foreach ( $options as $option => $label ) {
                 $html .= sprintf( '<option value="%s" %s>%s</option>',
                                   esc_attr( $option ),
@@ -282,7 +287,9 @@ class WPBDP_FieldTypes_Select extends WPBDP_FormFieldType {
         if ( $association != 'meta' && $association != 'tags' )
             return '';
 
-        $label = _x( 'Field Options (for select lists, radio buttons and checkboxes).', 'form-fields admin', 'WPBDM' ) . '<span class="description">(required)</span>';
+        $settings = array();
+
+        $settings['options'][] = _x( 'Field Options (for select lists, radio buttons and checkboxes).', 'form-fields admin', 'WPBDM' ) . '<span class="description">(required)</span>';
         
         $content  = '<span class="description">Comma (,) separated list of options</span><br />';
         $content .= '<textarea name="field[x_options]" cols="50" rows="2">';
@@ -291,7 +298,16 @@ class WPBDP_FieldTypes_Select extends WPBDP_FormFieldType {
             $content .= implode( ',', $field->data( 'options' ) );
         $content .= '</textarea>';
 
-        return self::render_admin_settings( array( array( $label, $content ) ) );
+        $settings['options'][] = $content;
+
+        $settings['empty_on_search'][] = _x('Allow empty selection on search?', 'form-fields admin', 'WPBDM');
+
+        $content  = '<span class="description">Empty search selection means users can make this field optional in searching. Turn it off if the field must always be searched on.</span><br />';
+        $content .= '<input type="checkbox" value="1" name="field[x_empty_on_search]" ' . ( !$field ? ' checked="checked"' : ($field->data( 'empty_on_search' ) ? ' checked="checked"' : '') ) . ' />';
+        
+        $settings['empty_on_search'][] = $content;
+     
+        return self::render_admin_settings( $settings );
     }
 
     public function process_field_settings( &$field ) {
@@ -304,6 +320,11 @@ class WPBDP_FieldTypes_Select extends WPBDP_FormFieldType {
             return new WP_Error( 'wpbdp-invalid-settings', _x( 'Field list of options is required.', 'form-fields admin', 'WPBDM' ) );
 
         $field->set_data( 'options', !empty( $options ) ? explode( ',', $options ) : array() );
+
+        if ( array_key_exists( 'x_empty_on_search', $_POST['field'] ) ) {
+            $empty_on_search = (bool) intval( $_POST['field']['x_empty_on_search'] );
+            $field->set_data( 'empty_on_search', $empty_on_search );
+        }
     }
 
     public function store_field_value( &$field, $post_id, $value ) {
@@ -384,7 +405,40 @@ class WPBDP_FieldTypes_TextArea extends WPBDP_FormFieldType {
 
     public function get_supported_associations() {
         return array( 'title', 'excerpt', 'content', 'meta' );
-    }    
+    }
+
+    public function render_field_settings( &$field=null, $association=null ) {
+        $settings = array();
+
+        $settings['allow_html'][] = _x( 'Allow HTML input for this field?', 'form-fields admin', 'WPBDM' );
+        $settings['allow_html'][] = '<input type="checkbox" value="1" name="field[allow_html]" ' . ( $field && $field->data( 'allow_html' ) ? ' checked="checked"' : '' ) . ' />';
+
+        if ( ( $field && $field->get_association() == 'content' ) || ( $association == 'content' ) ) {
+            $settings['allow_filters'][] = _x( 'Allow execution of WordPress shortcodes and filters?', 'form-fields admin', 'WPBDM' );
+            $settings['allow_filters'][] = '<input type="checkbox" value="1" name="field[allow_filters]" ' . ( $field && $field->data( 'allow_filters' ) ? ' checked="checked"' : '' ) . ' />';
+        }
+
+        return self::render_admin_settings( $settings );
+    }
+
+    public function process_field_settings( &$field ) {
+        $field->set_data( 'allow_html', isset( $_POST['field']['allow_html'] ) ? (bool) intval( $_POST['field']['allow_html'] ) : false );
+        $field->set_data( 'allow_filters', isset( $_POST['field']['allow_filters'] ) ? (bool) intval( $_POST['field']['allow_filters'] ) : false );
+    }
+
+    public function get_field_html_value( &$field, $post_id ) {
+        $value = $field->value( $post_id );
+
+        if ( $field->get_association() == 'content' && $field->data( 'allow_filters' ) ) {
+            $value = apply_filters( 'the_content', $value );
+        } elseif ( $field->data( 'allow_html' ) ) {
+            $value = nl2br( wp_kses_post( $value ) );
+        } else {
+            $value = nl2br( wp_kses( $value, array() ) );
+        }
+
+        return $value;
+    }
 
 }
 
@@ -843,7 +897,7 @@ class CategoryFormInputWalker extends Walker {
         $this->field = $field;
     }
 
-    public function start_el( &$output, $category, $depth, $args, $id = 0 ) {
+    public function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
         switch ( $this->input_type ) {
             case 'checkbox':
                 $output .= '<div class="wpbdmcheckboxclass">';

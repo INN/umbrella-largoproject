@@ -144,7 +144,7 @@ class WPBDP_DirectoryController {
         query_posts(array(
             'post_type' => WPBDP_POST_TYPE,
             'post_status' => 'publish',
-            'posts_per_page' => 0,
+            'posts_per_page' => wpbdp_get_option( 'listings-per-page' ) > 0 ? wpbdp_get_option( 'listings-per-page' ) : -1,
             'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
             'orderby' => wpbdp_get_option('listings-order-by', 'date'),
             'order' => wpbdp_get_option('listings-sort', 'ASC'),
@@ -179,7 +179,7 @@ class WPBDP_DirectoryController {
         query_posts(array(
             'post_type' => WPBDP_POST_TYPE,
             'post_status' => 'publish',
-            'posts_per_page' => 0,
+            'posts_per_page' => wpbdp_get_option( 'listings-per-page' ) > 0 ? wpbdp_get_option( 'listings-per-page' ) : -1,
             'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
             'orderby' => wpbdp_get_option('listings-order-by', 'date'),
             'order' => wpbdp_get_option('listings-sort', 'ASC'),
@@ -213,7 +213,7 @@ class WPBDP_DirectoryController {
 
         query_posts(array(
             'post_type' => WPBDP_POST_TYPE,
-            'posts_per_page' => 0,
+            'posts_per_page' => wpbdp_get_option( 'listings-per-page' ) > 0 ? wpbdp_get_option( 'listings-per-page' ) : -1,
             'post_status' => 'publish',
             'paged' => intval($paged),
             'orderby' => wpbdp_get_option('listings-order-by', 'date'),
@@ -261,11 +261,12 @@ class WPBDP_DirectoryController {
 
             if (wpbdp_get_option('recaptcha-on')) {
                 if ($private_key = wpbdp_get_option('recaptcha-private-key')) {
-                    require_once(WPBDP_PATH . 'recaptcha/recaptchalib.php');
+                    if ( !function_exists( 'recaptcha_get_html' ) )
+                        require_once(WPBDP_PATH . 'libs/recaptcha/recaptchalib.php');
 
                     $resp = recaptcha_check_answer($private_key, $_SERVER['REMOTE_ADDR'], $_POST['recaptcha_challenge_field'], $_POST['recaptcha_response_field']);
                     if (!$resp->is_valid)
-                        $validation_errors[] = sprintf(_x("The reCAPTCHA wasn't entered correctly: %s", 'contact-message', 'WPBDM'), $resp->error);
+                        $validation_errors[] = _x("The reCAPTCHA wasn't entered correctly.", 'contact-message', 'WPBDM');
                 }
             }
 
@@ -279,7 +280,7 @@ class WPBDP_DirectoryController {
                 $wpbdmsendtoemail=wpbusdirman_get_the_business_email($listing_id);
                 $time = date_i18n( __('l F j, Y \a\t g:i a'), current_time( 'timestamp' ) );
 
-                $body = wpbdp_render_page(WPBDP_PATH . 'templates/parts/contact.email', array(
+                $body = wpbdp_render_page(WPBDP_PATH . 'templates/email/contact.tpl.php', array(
                     'listing_url' => get_permalink($listing_id),
                     'name' => $author_name,
                     'email' => $author_email,
@@ -313,7 +314,7 @@ class WPBDP_DirectoryController {
 
         if ( count(get_terms(WPBDP_CATEGORY_TAX, array('hide_empty' => 0))) == 0 ) {
             if (is_user_logged_in() && current_user_can('install_plugins')) {
-                $html .= "<p>" . _x('There are no categories assigned to the business directory yet. You need to assign some categories to the business directory. Only admins can see this message. Regular users are seeing a message that there are currently no listings in the directory. Listings cannot be added until you assign categories to the business directory.', 'templates', 'WPBDM') . "</p>";
+                $html .= wpbdp_render_msg( _x('There are no categories assigned to the business directory yet. You need to assign some categories to the business directory. Only admins can see this message. Regular users are seeing a message that there are currently no listings in the directory. Listings cannot be added until you assign categories to the business directory.', 'templates', 'WPBDM'), 'error' );
             } else {
                 $html .= "<p>" . _x('There are currently no listings in the directory.', 'templates', 'WPBDM') . "</p>";
             }
@@ -550,7 +551,7 @@ class WPBDP_DirectoryController {
 
         query_posts( array(
             'post_type' => WPBDP_POST_TYPE,
-            'posts_per_page' => 0,
+            'posts_per_page' => wpbdp_get_option( 'listings-per-page' ) > 0 ? wpbdp_get_option( 'listings-per-page' ) : -1,
             'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
             'post__in' => $results ? $results : array(0),
             'orderby' => wpbdp_get_option( 'listings-order-by', 'date' ),
