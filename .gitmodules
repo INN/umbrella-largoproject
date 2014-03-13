@@ -121,3 +121,6 @@
 [submodule "wp-content/themes/lensnola"]
 	path = wp-content/themes/lensnola
 	url = https://aschweigert@bitbucket.org/projectlargo/theme-lensnola.git
+[submodule "wp-content/themes/support"]
+	path = wp-content/themes/support
+	url = https://aschweigert@bitbucket.org/projectlargo/theme-support.git
