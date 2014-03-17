@@ -84,46 +84,46 @@
 	url = https://github.com/INN/argo-audio-player.git
 [submodule "wp-content/themes/chicago-reporter"]
 	path = wp-content/themes/chicago-reporter
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-chicago-reporter.git
+	url = https://bitbucket.org/projectlargo/theme-chicago-reporter.git
 [submodule "wp-content/themes/cpipr"]
 	path = wp-content/themes/cpipr
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-cpipr.git
+	url = https://bitbucket.org/projectlargo/theme-cpipr.git
 [submodule "wp-content/themes/impaqme"]
 	path = wp-content/themes/impaqme
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-impaqme.git
+	url = https://bitbucket.org/projectlargo/theme-impaqme.git
 [submodule "wp-content/themes/inews"]
 	path = wp-content/themes/inews
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-inews.git
+	url = https://bitbucket.org/projectlargo/theme-inews.git
 [submodule "wp-content/themes/kentucky"]
 	path = wp-content/themes/kentucky
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-kycir.git
+	url = https://bitbucket.org/projectlargo/theme-kycir.git
 [submodule "wp-content/themes/largoproject"]
 	path = wp-content/themes/largoproject
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-largoproject.git
+	url = https://bitbucket.org/projectlargo/theme-largoproject.git
 [submodule "wp-content/themes/laschoolreport"]
 	path = wp-content/themes/laschoolreport
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-laschoolreport.git
+	url = https://bitbucket.org/projectlargo/theme-laschoolreport.git
 [submodule "wp-content/themes/nmindepth"]
 	path = wp-content/themes/nmindepth
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-nmindepth.git
+	url = https://bitbucket.org/projectlargo/theme-nmindepth.git
 [submodule "wp-content/themes/teenvoices"]
 	path = wp-content/themes/teenvoices
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-teenvoices.git
+	url = https://bitbucket.org/projectlargo/theme-teenvoices.git
 [submodule "wp-content/themes/voice-of-oc"]
 	path = wp-content/themes/voice-of-oc
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-voice-of-oc.git
+	url = https://bitbucket.org/projectlargo/theme-voice-of-oc.git
 [submodule "wp-content/themes/ctmirror"]
 	path = wp-content/themes/ctmirror
 	url = https://github.com/drywall/ctmirror.git
 [submodule "wp-content/themes/newsdesk"]
 	path = wp-content/themes/newsdesk
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-newsdesk.git
+	url = https://bitbucket.org/projectlargo/theme-newsdesk.git
 [submodule "wp-content/themes/lensnola"]
 	path = wp-content/themes/lensnola
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-lensnola.git
+	url = https://bitbucket.org/projectlargo/theme-lensnola.git
 [submodule "wp-content/themes/support"]
 	path = wp-content/themes/support
-	url = https://aschweigert@bitbucket.org/projectlargo/theme-support.git
+	url = https://bitbucket.org/projectlargo/theme-support.git
 [submodule "wp-content/themes/nchealthnews"]
 	path = wp-content/themes/nchealthnews
 	url = https://bitbucket.org/projectlargo/theme-nchealthnews.git
