@@ -124,3 +124,6 @@
 [submodule "wp-content/themes/support"]
 	path = wp-content/themes/support
 	url = https://aschweigert@bitbucket.org/projectlargo/theme-support.git
+[submodule "wp-content/themes/nchealthnews"]
+	path = wp-content/themes/nchealthnews
+	url = https://bitbucket.org/projectlargo/theme-nchealthnews.git
