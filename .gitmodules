@@ -127,3 +127,6 @@
 [submodule "wp-content/themes/nchealthnews"]
 	path = wp-content/themes/nchealthnews
 	url = https://bitbucket.org/projectlargo/theme-nchealthnews.git
+[submodule "wp-content/themes/insideenergy"]
+	path = wp-content/themes/insideenergy
+	url = https://bitbucket.org/projectlargo/theme-insideenergy.git
