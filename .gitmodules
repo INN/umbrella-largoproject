@@ -67,9 +67,6 @@
 [submodule "wp-content/themes/montana"]
 	path = wp-content/themes/montana
 	url = https://bitbucket.org/projectlargo/theme-montana.git
-[submodule "wp-content/themes/fern"]
-	path = wp-content/themes/fern
-	url = https://bitbucket.org/projectlargo/theme-fern.git
 [submodule "wp-content/themes/innovationtrail"]
 	path = wp-content/themes/innovationtrail
 	url = https://bitbucket.org/projectlargo/theme-innovationtrail.git
@@ -100,9 +97,6 @@
 [submodule "wp-content/themes/largoproject"]
 	path = wp-content/themes/largoproject
 	url = https://bitbucket.org/projectlargo/theme-largoproject.git
-[submodule "wp-content/themes/laschoolreport"]
-	path = wp-content/themes/laschoolreport
-	url = https://bitbucket.org/projectlargo/theme-laschoolreport.git
 [submodule "wp-content/themes/nmindepth"]
 	path = wp-content/themes/nmindepth
 	url = https://bitbucket.org/projectlargo/theme-nmindepth.git
@@ -121,12 +115,18 @@
 [submodule "wp-content/themes/lensnola"]
 	path = wp-content/themes/lensnola
 	url = https://bitbucket.org/projectlargo/theme-lensnola.git
-[submodule "wp-content/themes/support"]
-	path = wp-content/themes/support
-	url = https://bitbucket.org/projectlargo/theme-support.git
 [submodule "wp-content/themes/nchealthnews"]
 	path = wp-content/themes/nchealthnews
 	url = https://bitbucket.org/projectlargo/theme-nchealthnews.git
 [submodule "wp-content/themes/insideenergy"]
 	path = wp-content/themes/insideenergy
 	url = https://bitbucket.org/projectlargo/theme-insideenergy.git
+[submodule "wp-content/themes/austinbulldog"]
+	path = wp-content/themes/austinbulldog
+	url = https://bitbucket.org/projectlargo/theme-austinbulldog.git
+[submodule "wp-content/themes/georgianewslab"]
+	path = wp-content/themes/georgianewslab
+	url = https://bitbucket.org/projectlargo/theme-georgianewslab.git
+[submodule "wp-content/themes/womens-enews"]
+	path = wp-content/themes/womens-enews
+	url = https://bitbucket.org/projectlargo/theme-womens-enews.git
