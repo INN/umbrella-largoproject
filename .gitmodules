@@ -85,9 +85,6 @@
 [submodule "wp-content/themes/cpipr"]
 	path = wp-content/themes/cpipr
 	url = https://bitbucket.org/projectlargo/theme-cpipr.git
-[submodule "wp-content/themes/impaqme"]
-	path = wp-content/themes/impaqme
-	url = https://bitbucket.org/projectlargo/theme-impaqme.git
 [submodule "wp-content/themes/inews"]
 	path = wp-content/themes/inews
 	url = https://bitbucket.org/projectlargo/theme-inews.git
