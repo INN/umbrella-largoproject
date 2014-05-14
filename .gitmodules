@@ -127,3 +127,6 @@
 [submodule "wp-content/themes/womens-enews"]
 	path = wp-content/themes/womens-enews
 	url = https://bitbucket.org/projectlargo/theme-womens-enews.git
+[submodule "wp-content/themes/bronx"]
+	path = wp-content/themes/bronx
+	url = https://bitbucket.org/projectlargo/theme-bronx.git
