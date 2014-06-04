@@ -130,3 +130,6 @@
 [submodule "wp-content/themes/bronx"]
 	path = wp-content/themes/bronx
 	url = https://bitbucket.org/projectlargo/theme-bronx.git
+[submodule "tools"]
+	path = tools
+	url = https://github.com/INN/deploy-tools.git

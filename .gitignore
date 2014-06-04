@@ -1,9 +1,14 @@
+.vagrant
+wp-content/themes/twenty*
+*.sql
+
 *~
 .DS_Store
 .svn
 .cvs
 *.bak
 *.swp
+*.pyc
 Thumbs.db
 Capfile
 /config
