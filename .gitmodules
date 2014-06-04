@@ -133,3 +133,6 @@
 [submodule "tools"]
 	path = tools
 	url = https://github.com/INN/deploy-tools.git
+[submodule "wp-content/themes/brooklyn"]
+	path = wp-content/themes/brooklyn
+	url = https://ryannagle@bitbucket.org/projectlargo/theme-brooklyn.git
