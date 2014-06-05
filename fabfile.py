@@ -8,7 +8,6 @@ Base configuration
 env.project_name = 'largoproject'
 env.file_path = '.'
 
-
 # Environments
 def production():
     """
@@ -28,3 +27,8 @@ def staging():
     env.hosts = [os.environ['LARGOPROJECT_STAGING_SFTP_HOST'], ]
     env.user = os.environ['LARGOPROJECT_STAGING_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_STAGING_SFTP_PASSWORD']
+
+try:
+    from local_fabfile import  *
+except ImportError:
+    pass
