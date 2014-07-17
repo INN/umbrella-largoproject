@@ -8,6 +8,10 @@ Base configuration
 env.project_name = 'largoproject'
 env.file_path = '.'
 
+env.hipchat_token = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_TOKEN']
+env.hipchat_room_id = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_ROOM_ID']
+
+
 # Environments
 def production():
     """
