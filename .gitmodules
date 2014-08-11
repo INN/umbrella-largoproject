@@ -136,3 +136,6 @@
 [submodule "wp-content/themes/current"]
 	path = wp-content/themes/current
 	url = git@bitbucket.org:projectlargo/theme-current.git
+[submodule "wp-content/themes/citylimits"]
+	path = wp-content/themes/citylimits
+	url = git@bitbucket.org:projectlargo/theme-citylimits.git
