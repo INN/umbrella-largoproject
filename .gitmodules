@@ -139,3 +139,6 @@
 [submodule "wp-content/themes/citylimits"]
 	path = wp-content/themes/citylimits
 	url = git@bitbucket.org:projectlargo/theme-citylimits.git
+[submodule "wp-content/themes/largo-dev"]
+	path = wp-content/themes/largo-dev
+	url = git@github.com:INN/Largo.git
