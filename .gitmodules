@@ -133,3 +133,12 @@
 [submodule "wp-content/themes/brooklyn"]
 	path = wp-content/themes/brooklyn
 	url = https://bitbucket.org/projectlargo/theme-brooklyn.git
+[submodule "wp-content/themes/current"]
+	path = wp-content/themes/current
+	url = git@bitbucket.org:projectlargo/theme-current.git
+[submodule "wp-content/themes/citylimits"]
+	path = wp-content/themes/citylimits
+	url = git@bitbucket.org:projectlargo/theme-citylimits.git
+[submodule "wp-content/themes/largo-dev"]
+	path = wp-content/themes/largo-dev
+	url = git@github.com:INN/Largo.git
