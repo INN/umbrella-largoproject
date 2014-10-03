@@ -142,3 +142,9 @@
 [submodule "wp-content/themes/citylimits"]
 	path = wp-content/themes/citylimits
 	url = https://bitbucket.org/projectlargo/theme-citylimits.git
+[submodule "wp-content/themes/fcir"]
+	path = wp-content/themes/fcir
+	url = https://bitbucket.org/projectlargo/theme-fcir
+[submodule "wp-content/themes/gijn-impact"]
+	path = wp-content/themes/gijn-impact
+	url = https://bitbucket.org/projectlargo/theme-gijn-impact.git
