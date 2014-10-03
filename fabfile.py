@@ -35,6 +35,16 @@ def staging():
     env.user = os.environ['LARGOPROJECT_STAGING_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_STAGING_SFTP_PASSWORD']
 
+def vagrant():
+    """
+    Work on vagrant (dev) environment
+    """
+    env.user = 'vagrant'
+    env.hosts = ['127.0.0.1:2222']
+    env.path = '/vagrant/'
+    result = local('vagrant ssh-config | grep IdentityFile', capture=True)
+    env.key_filename = result.split()[1]
+
 try:
     from local_fabfile import  *
 except ImportError:
