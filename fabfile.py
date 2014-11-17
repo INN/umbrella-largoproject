@@ -7,7 +7,6 @@ from fabric.api import task
 Base configuration
 """
 env.project_name = 'largoproject'
-env.file_path = '.'
 
 try:
     env.hipchat_token = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_TOKEN']
