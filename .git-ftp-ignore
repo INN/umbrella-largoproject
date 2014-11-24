@@ -2,3 +2,6 @@ tools
 fabfile.py
 Vagrantfile
 requirements.txt
+tests/*
+phpunit.xml
+.travis.yml

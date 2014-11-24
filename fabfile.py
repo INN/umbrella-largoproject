@@ -1,12 +1,12 @@
 import os
 
 from tools.fablib import *
+from fabric.api import task
 
 """
 Base configuration
 """
 env.project_name = 'largoproject'
-env.file_path = '.'
 
 try:
     env.hipchat_token = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_TOKEN']
@@ -16,6 +16,7 @@ except KeyError:
 
 
 # Environments
+@task
 def production():
     """
     Work on production environment
@@ -26,6 +27,7 @@ def production():
     env.password = os.environ['LARGOPROJECT_PRODUCTION_SFTP_PASSWORD']
 
 
+@task
 def staging():
     """
     Work on staging environment
