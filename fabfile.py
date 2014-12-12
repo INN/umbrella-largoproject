@@ -7,6 +7,7 @@ from fabric.api import task
 Base configuration
 """
 env.project_name = 'largoproject'
+env.domain = 'vagrant.dev'
 
 try:
     env.hipchat_token = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_TOKEN']
@@ -25,6 +26,7 @@ def production():
     env.hosts = [os.environ['LARGOPROJECT_PRODUCTION_SFTP_HOST'], ]
     env.user = os.environ['LARGOPROJECT_PRODUCTION_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_PRODUCTION_SFTP_PASSWORD']
+    env.domain = 'largoproject.org'
 
 
 @task
@@ -36,6 +38,7 @@ def staging():
     env.hosts = [os.environ['LARGOPROJECT_STAGING_SFTP_HOST'], ]
     env.user = os.environ['LARGOPROJECT_STAGING_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_STAGING_SFTP_PASSWORD']
+    env.domain = 'largoproject.staging.wpengine.com'
 
 
 try:
