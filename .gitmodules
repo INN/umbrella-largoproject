@@ -97,9 +97,6 @@
 [submodule "wp-content/themes/teenvoices"]
 	path = wp-content/themes/teenvoices
 	url = https://bitbucket.org/projectlargo/theme-teenvoices.git
-[submodule "wp-content/themes/voice-of-oc"]
-	path = wp-content/themes/voice-of-oc
-	url = https://bitbucket.org/projectlargo/theme-voice-of-oc.git
 [submodule "wp-content/themes/ctmirror"]
 	path = wp-content/themes/ctmirror
 	url = https://github.com/drywall/ctmirror.git
