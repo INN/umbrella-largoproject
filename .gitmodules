@@ -148,3 +148,6 @@
 [submodule "wp-content/plugins/news-quiz"]
 	path = wp-content/plugins/news-quiz
 	url = https://github.com/INN/news-quiz.git
+[submodule "wp-content/themes/voice-of-oc"]
+	path = wp-content/themes/voice-of-oc
+	url = https://bitbucket.org/projectlargo/theme-voice-of-oc.git
