@@ -1,3 +1,5 @@
-Fabric==1.8.3
+fabric==1.8.3
 pyquery==1.2.9
 requests==2.5.0
+sphinx==1.2.3
+sphinxcontrib-phpdomain==0.1.4
