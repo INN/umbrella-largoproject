@@ -151,3 +151,6 @@
 [submodule "wp-content/themes/voiceofoc"]
 	path = wp-content/themes/voiceofoc
 	url = git@bitbucket.org:projectlargo/theme-voice-of-oc.git
+[submodule "wp-content/themes/npq"]
+	path = wp-content/themes/npq
+	url = git@bitbucket.org:projectlargo/theme-npq.git
