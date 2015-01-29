@@ -4,16 +4,23 @@ from tools.fablib import *
 from fabric.api import task
 
 """
-Base configuration
+Base configurations, override domain in your own local_fabfile.py
 """
 env.project_name = 'largoproject'
-env.domain = 'vagrant.dev'
+env.local_db_user = 'root';
+
+try:
+    env.domain
+except AttributeError:
+    env.domain = 'vagrant.dev'
 
 try:
     env.hipchat_token = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_TOKEN']
     env.hipchat_room_id = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_ROOM_ID']
 except KeyError:
     pass
+
+
 
 
 # Environments
@@ -39,7 +46,6 @@ def staging():
     env.user = os.environ['LARGOPROJECT_STAGING_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_STAGING_SFTP_PASSWORD']
     env.domain = 'largoproject.staging.wpengine.com'
-
 
 try:
     from local_fabfile import  *
