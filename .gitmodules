@@ -28,9 +28,6 @@
 [submodule "wp-content/themes/oklahomawatch"]
 	path = wp-content/themes/oklahomawatch
 	url = https://bitbucket.org/projectlargo/theme-oklahomawatch.git
-[submodule "wp-content/themes/wisconsinwatch"]
-	path = wp-content/themes/wisconsinwatch
-	url = https://bitbucket.org/cornershopcreative/wisconsinwatch.git
 [submodule "wp-content/themes/sirf"]
 	path = wp-content/themes/sirf
 	url = https://bitbucket.org/projectlargo/theme-sirf.git
