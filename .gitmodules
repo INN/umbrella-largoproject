@@ -154,3 +154,6 @@
 [submodule "wp-content/themes/npq"]
 	path = wp-content/themes/npq
 	url = git@bitbucket.org:projectlargo/theme-npq.git
+[submodule "wp-content/themes/catalystchicago"]
+	path = wp-content/themes/catalystchicago
+	url = https://benlk@bitbucket.org/projectlargo/theme-chicago-catalyst.git
