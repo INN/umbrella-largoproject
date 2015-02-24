@@ -4,6 +4,7 @@ wp-content/themes/twenty*
 *.sql
 data/*
 wp-scripts/*
+wp-scripts
 
 *~
 .DS_Store
@@ -78,7 +79,7 @@ wp-content/debug.log
 /wp-content/themes/*
 /wp-content/plugins/*
 !/wp-content/plugins/news-quiz
-
+!/wp-content/plugins/DoubleClick-for-WordPress
 # large/disallowed file types
 # a CDN should be used for these
 *.hqx
