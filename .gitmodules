@@ -160,3 +160,6 @@
 [submodule "wp-content/plugins/DoubleClick-for-WordPress"]
 	path = wp-content/plugins/DoubleClick-for-WordPress
 	url = https://github.com/INN/DoubleClick-for-WordPress.git
+[submodule "wp-content/plugins/dfp"]
+	path = wp-content/plugins/dfp
+	url = https://github.com/INN/DoubleClick-for-WordPress.git
