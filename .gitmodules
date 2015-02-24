@@ -157,3 +157,6 @@
 [submodule "wp-content/themes/se-energy-news"]
 	path = wp-content/themes/se-energy-news
 	url = https://bitbucket.org/projectlargo/theme-se-energy-news.git
+[submodule "wp-content/plugins/DoubleClick-for-WordPress"]
+	path = wp-content/plugins/DoubleClick-for-WordPress
+	url = https://github.com/INN/DoubleClick-for-WordPress.git
