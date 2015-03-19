@@ -163,3 +163,6 @@
 [submodule "wp-content/plugins/dfp"]
 	path = wp-content/plugins/dfp
 	url = https://github.com/INN/DoubleClick-for-WordPress.git
+[submodule "wp-content/themes/publicsource"]
+	path = wp-content/themes/publicsource
+	url = https://bitbucket.org/projectlargo/theme-publicsource.git
