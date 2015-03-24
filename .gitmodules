@@ -166,3 +166,6 @@
 [submodule "wp-content/themes/publicsource"]
 	path = wp-content/themes/publicsource
 	url = https://bitbucket.org/projectlargo/theme-publicsource.git
+[submodule "wp-content/themes/ctmverticals"]
+	path = wp-content/themes/ctmverticals
+	url = git@bitbucket.org:projectlargo/theme-ctmirror-2.git
