@@ -33,7 +33,7 @@ def production():
     env.hosts = [os.environ['LARGOPROJECT_PRODUCTION_SFTP_HOST'], ]
     env.user = os.environ['LARGOPROJECT_PRODUCTION_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_PRODUCTION_SFTP_PASSWORD']
-    env.domain = 'largoproject.org'
+    env.domain = 'largoproject.wpengine.com'
 
 
 @task
