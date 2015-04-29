@@ -169,3 +169,6 @@
 [submodule "wp-content/themes/ctmverticals"]
 	path = wp-content/themes/ctmverticals
 	url = git@bitbucket.org:projectlargo/theme-ctmirror-2.git
+[submodule "wp-content/themes/nhindepth"]
+	path = wp-content/themes/nhindepth
+	url = https://bitbucket.org/projectlargo/theme-nhindepth.git
