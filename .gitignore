@@ -79,6 +79,7 @@ wp-content/debug.log
 /wp-content/themes/*
 /wp-content/plugins/*
 !/wp-content/plugins/news-quiz
+!/wp-content/plugins/analytic-bridge
 
 # large/disallowed file types
 # a CDN should be used for these
