@@ -172,3 +172,6 @@
 [submodule "wp-content/themes/nhindepth"]
 	path = wp-content/themes/nhindepth
 	url = https://bitbucket.org/projectlargo/theme-nhindepth.git
+[submodule "wp-content/plugins/analytic-bridge"]
+	path = wp-content/plugins/analytic-bridge
+	url = https://github.com/INN/analytic-bridge.git
