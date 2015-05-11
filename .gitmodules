@@ -178,3 +178,6 @@
 [submodule "wp-content/themes/midwestenergynews"]
 	path = wp-content/themes/midwestenergynews
 	url = git@bitbucket.org:projectlargo/theme-midwestenergynews.git
+[submodule "wp-content/themes/hashtag30"]
+	path = wp-content/themes/hashtag30
+	url = https://bitbucket.org/projectlargo/theme-hashtag30.git
