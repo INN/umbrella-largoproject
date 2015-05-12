@@ -34,6 +34,7 @@ def production():
     env.user = os.environ['LARGOPROJECT_PRODUCTION_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_PRODUCTION_SFTP_PASSWORD']
     env.domain = 'largoproject.wpengine.com'
+    env.port = 2222
 
 
 @task
@@ -46,6 +47,8 @@ def staging():
     env.user = os.environ['LARGOPROJECT_STAGING_SFTP_USER']
     env.password = os.environ['LARGOPROJECT_STAGING_SFTP_PASSWORD']
     env.domain = 'largoproject.staging.wpengine.com'
+    env.port = 2222
+
 
 try:
     from local_fabfile import  *
