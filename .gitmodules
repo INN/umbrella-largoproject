@@ -181,3 +181,6 @@
 [submodule "wp-content/themes/hashtag30"]
 	path = wp-content/themes/hashtag30
 	url = https://bitbucket.org/projectlargo/theme-hashtag30.git
+[submodule "wp-content/plugins/link-roundups"]
+	path = wp-content/plugins/link-roundups
+	url = git@github.com:INN/link-roundups.git
