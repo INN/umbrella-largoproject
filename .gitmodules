@@ -187,3 +187,6 @@
 [submodule "wp-content/themes/bigagwatch"]
 	path = wp-content/themes/bigagwatch
 	url = https://bitbucket.org/projectlargo/theme-bigagwatch.git
+[submodule "wp-content/themes/marylandreporter"]
+	path = wp-content/themes/marylandreporter
+	url = https://bitbucket.org/projectlargo/theme-marylandreporter.git
