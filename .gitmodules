@@ -184,3 +184,6 @@
 [submodule "wp-content/plugins/link-roundups"]
 	path = wp-content/plugins/link-roundups
 	url = https://github.com/INN/link-roundups.git
+[submodule "wp-content/themes/bigagwatch"]
+	path = wp-content/themes/bigagwatch
+	url = https://bitbucket.org/projectlargo/theme-bigagwatch.git
