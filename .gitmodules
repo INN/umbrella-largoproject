@@ -190,3 +190,6 @@
 [submodule "wp-content/themes/marylandreporter"]
 	path = wp-content/themes/marylandreporter
 	url = https://bitbucket.org/projectlargo/theme-marylandreporter.git
+[submodule "wp-scripts"]
+	path = wp-scripts
+	url = git@github.com:INN/wp-scripts.git
