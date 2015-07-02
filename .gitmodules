@@ -168,7 +168,7 @@
 	url = https://bitbucket.org/projectlargo/theme-publicsource.git
 [submodule "wp-content/themes/ctmverticals"]
 	path = wp-content/themes/ctmverticals
-	url = git@bitbucket.org:projectlargo/theme-ctmirror-2.git
+	url = https://bitbucket.org/projectlargo/theme-ctmirror-2.git
 [submodule "wp-content/themes/nhindepth"]
 	path = wp-content/themes/nhindepth
 	url = https://bitbucket.org/projectlargo/theme-nhindepth.git
@@ -192,4 +192,4 @@
 	url = https://bitbucket.org/projectlargo/theme-marylandreporter.git
 [submodule "wp-scripts"]
 	path = wp-scripts
-	url = git@github.com:INN/wp-scripts.git
+	url = https://github.com/INN/wp-scripts.git
