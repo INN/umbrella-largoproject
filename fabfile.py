@@ -7,7 +7,10 @@ from fabric.api import task
 Base configurations, override domain in your own local_fabfile.py
 """
 env.project_name = 'largoproject'
-env.local_db_user = 'root';
+env.local_db_user = 'root'
+
+env.sftp_deploy = True
+
 
 try:
     env.domain
@@ -19,8 +22,6 @@ try:
     env.hipchat_room_id = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_ROOM_ID']
 except KeyError:
     pass
-
-
 
 
 # Environments
