@@ -3,8 +3,6 @@ local_fabfile.py
 wp-content/themes/twenty*
 *.sql
 data/*
-wp-scripts/*
-wp-scripts
 
 *~
 .DS_Store
