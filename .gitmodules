@@ -193,3 +193,6 @@
 [submodule "wp-scripts"]
 	path = wp-scripts
 	url = https://github.com/INN/wp-scripts.git
+[submodule "wp-content/themes/iowa-caucus"]
+	path = wp-content/themes/iowa-caucus
+	url = https://bitbucket.org/projectlargo/theme-iowa-caucus.git
