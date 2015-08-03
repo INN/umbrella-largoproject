@@ -43,9 +43,6 @@
 [submodule "wp-content/themes/invw"]
 	path = wp-content/themes/invw
 	url = https://bitbucket.org/projectlargo/theme-invw.git
-[submodule "wp-content/plugins/navis-documentcloud"]
-	path = wp-content/plugins/navis-documentcloud
-	url = https://github.com/INN/navis-documentcloud.git
 [submodule "wp-content/plugins/largo-clean-contact"]
 	path = wp-content/plugins/largo-clean-contact
 	url = https://github.com/INN/largo-clean-contact.git
