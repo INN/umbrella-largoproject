@@ -46,9 +46,6 @@
 [submodule "wp-content/plugins/navis-documentcloud"]
 	path = wp-content/plugins/navis-documentcloud
 	url = https://github.com/INN/navis-documentcloud.git
-[submodule "wp-content/plugins/argo-links"]
-	path = wp-content/plugins/argo-links
-	url = https://github.com/INN/argo-links.git
 [submodule "wp-content/plugins/largo-clean-contact"]
 	path = wp-content/plugins/largo-clean-contact
 	url = https://github.com/INN/largo-clean-contact.git
