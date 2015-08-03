@@ -196,3 +196,6 @@
 [submodule "wp-content/themes/iowa-caucus"]
 	path = wp-content/themes/iowa-caucus
 	url = https://bitbucket.org/projectlargo/theme-iowa-caucus.git
+[submodule "wp-content/plugins/documentcloud"]
+	path = wp-content/plugins/documentcloud
+	url = https://github.com/documentcloud/wordpress-documentcloud.git
