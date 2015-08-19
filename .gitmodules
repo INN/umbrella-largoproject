@@ -193,3 +193,6 @@
 [submodule "wp-content/plugins/documentcloud"]
 	path = wp-content/plugins/documentcloud
 	url = https://github.com/documentcloud/wordpress-documentcloud.git
+[submodule "wp-content/themes/sfpublicpress"]
+	path = wp-content/themes/sfpublicpress
+	url = https://bitbucket.org/projectlargo/theme-sfpublicpress.git
