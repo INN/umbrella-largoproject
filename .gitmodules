@@ -198,4 +198,4 @@
 	url = https://bitbucket.org/projectlargo/theme-sfpublicpress.git
 [submodule "wp-content/themes/cornellsun"]
 	path = wp-content/themes/cornellsun
-	url = https://bitbucket.org/projectlargo/theme-cornellsun.git
+	url = git@bitbucketet.org:projectlargo/theme-cornellsun.git
