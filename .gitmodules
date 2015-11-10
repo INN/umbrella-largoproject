@@ -196,6 +196,3 @@
 [submodule "wp-content/themes/sfpublicpress"]
 	path = wp-content/themes/sfpublicpress
 	url = https://bitbucket.org/projectlargo/theme-sfpublicpress.git
-[submodule "wp-content/themes/cornellsun"]
-	path = wp-content/themes/cornellsun
-	url = git@bitbucketet.org:projectlargo/theme-cornellsun.git
