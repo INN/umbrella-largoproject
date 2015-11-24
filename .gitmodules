@@ -141,7 +141,7 @@
 	url = https://github.com/INN/news-quiz.git
 [submodule "wp-content/themes/voiceofoc"]
 	path = wp-content/themes/voiceofoc
-	url = git@bitbucket.org:projectlargo/theme-voice-of-oc.git
+	url = https://bitbucket.org/projectlargo/theme-voice-of-oc.git
 [submodule "wp-content/themes/npq"]
 	path = wp-content/themes/npq
 	url = git@bitbucket.org:projectlargo/theme-npq.git
@@ -171,7 +171,7 @@
 	url = https://github.com/INN/analytic-bridge.git
 [submodule "wp-content/themes/midwestenergynews"]
 	path = wp-content/themes/midwestenergynews
-	url = git@bitbucket.org:projectlargo/theme-midwestenergynews.git
+	url = https://bitbucket.org/projectlargo/theme-midwestenergynews.git
 [submodule "wp-content/themes/hashtag30"]
 	path = wp-content/themes/hashtag30
 	url = https://bitbucket.org/projectlargo/theme-hashtag30.git
