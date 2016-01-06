@@ -46,9 +46,6 @@
 [submodule "wp-content/plugins/largo-clean-contact"]
 	path = wp-content/plugins/largo-clean-contact
 	url = https://github.com/INN/largo-clean-contact.git
-[submodule "wp-content/plugins/navis-jiffy-posts"]
-	path = wp-content/plugins/navis-jiffy-posts
-	url = https://github.com/INN/navis-jiffy-posts.git
 [submodule "wp-content/plugins/navis-slideshows"]
 	path = wp-content/plugins/navis-slideshows
 	url = https://github.com/INN/navis-slideshows.git
