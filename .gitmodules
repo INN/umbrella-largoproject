@@ -46,18 +46,12 @@
 [submodule "wp-content/plugins/largo-clean-contact"]
 	path = wp-content/plugins/largo-clean-contact
 	url = https://github.com/INN/largo-clean-contact.git
-[submodule "wp-content/plugins/navis-jiffy-posts"]
-	path = wp-content/plugins/navis-jiffy-posts
-	url = https://github.com/INN/navis-jiffy-posts.git
 [submodule "wp-content/plugins/navis-slideshows"]
 	path = wp-content/plugins/navis-slideshows
 	url = https://github.com/INN/navis-slideshows.git
 [submodule "wp-content/themes/montana"]
 	path = wp-content/themes/montana
 	url = https://bitbucket.org/projectlargo/theme-montana.git
-[submodule "wp-content/themes/innovationtrail"]
-	path = wp-content/themes/innovationtrail
-	url = https://bitbucket.org/projectlargo/theme-innovationtrail.git
 [submodule "wp-content/themes/ohio"]
 	path = wp-content/themes/ohio
 	url = https://bitbucket.org/projectlargo/theme-ohio.git
@@ -103,24 +97,15 @@
 [submodule "wp-content/themes/insideenergy"]
 	path = wp-content/themes/insideenergy
 	url = https://bitbucket.org/projectlargo/theme-insideenergy.git
-[submodule "wp-content/themes/austinbulldog"]
-	path = wp-content/themes/austinbulldog
-	url = https://bitbucket.org/projectlargo/theme-austinbulldog.git
 [submodule "wp-content/themes/georgianewslab"]
 	path = wp-content/themes/georgianewslab
 	url = https://bitbucket.org/projectlargo/theme-georgianewslab.git
 [submodule "wp-content/themes/womens-enews"]
 	path = wp-content/themes/womens-enews
 	url = https://bitbucket.org/projectlargo/theme-womens-enews.git
-[submodule "wp-content/themes/bronx"]
-	path = wp-content/themes/bronx
-	url = https://bitbucket.org/projectlargo/theme-bronx.git
 [submodule "tools"]
 	path = tools
 	url = https://github.com/INN/deploy-tools.git
-[submodule "wp-content/themes/brooklyn"]
-	path = wp-content/themes/brooklyn
-	url = https://bitbucket.org/projectlargo/theme-brooklyn.git
 [submodule "wp-content/themes/current"]
 	path = wp-content/themes/current
 	url = https://bitbucket.org/projectlargo/theme-current.git
@@ -130,9 +115,6 @@
 [submodule "wp-content/themes/citylimits"]
 	path = wp-content/themes/citylimits
 	url = https://bitbucket.org/projectlargo/theme-citylimits.git
-[submodule "wp-content/themes/fcir"]
-	path = wp-content/themes/fcir
-	url = https://bitbucket.org/projectlargo/theme-fcir
 [submodule "wp-content/themes/gijn-impact"]
 	path = wp-content/themes/gijn-impact
 	url = https://bitbucket.org/projectlargo/theme-gijn-impact.git
@@ -151,9 +133,6 @@
 [submodule "wp-content/themes/se-energy-news"]
 	path = wp-content/themes/se-energy-news
 	url = https://bitbucket.org/projectlargo/theme-se-energy-news.git
-[submodule "wp-content/plugins/DoubleClick-for-WordPress"]
-	path = wp-content/plugins/DoubleClick-for-WordPress
-	url = https://github.com/INN/DoubleClick-for-WordPress.git
 [submodule "wp-content/plugins/dfp"]
 	path = wp-content/plugins/dfp
 	url = https://github.com/INN/DoubleClick-for-WordPress.git
