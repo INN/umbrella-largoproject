@@ -178,3 +178,12 @@
 [submodule "wp-content/plugins/term-debt-consolidator"]
 	path = wp-content/plugins/term-debt-consolidator
 	url = https://github.com/INN/term-debt-consolidator.git
+[submodule "wp-content/themes/crimereport"]
+	path = wp-content/themes/crimereport
+	url = https://bitbucket.org/projectlargo/theme-crimereport.git
+[submodule "wp-content/themes/mstoday"]
+	path = wp-content/themes/mstoday
+	url = https://bitbucket.org/projectlargo/theme-mstoday.git
+[submodule "wp-content/themes/shelterforce"]
+	path = wp-content/themes/shelterforce
+	url = https://bitbucket.org/projectlargo/theme-shelterforce.git
