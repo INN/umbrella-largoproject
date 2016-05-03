@@ -187,3 +187,6 @@
 [submodule "wp-content/themes/shelterforce"]
 	path = wp-content/themes/shelterforce
 	url = https://bitbucket.org/projectlargo/theme-shelterforce.git
+[submodule "wp-content/plugins/pym-shortcode"]
+	path = wp-content/plugins/pym-shortcode
+	url = git@github.com:INN/pym-shortcode.git
