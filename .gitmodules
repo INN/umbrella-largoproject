@@ -187,3 +187,6 @@
 [submodule "wp-content/plugins/pym-shortcode"]
 	path = wp-content/plugins/pym-shortcode
 	url = git@github.com:INN/pym-shortcode.git
+[submodule "wp-content/themes/signcasts"]
+	path = wp-content/themes/signcasts
+	url = git@github.com:INN/theme-signcasts.git
