@@ -144,7 +144,7 @@
 	url = https://bitbucket.org/projectlargo/theme-nhindepth.git
 [submodule "wp-content/plugins/analytic-bridge"]
 	path = wp-content/plugins/analytic-bridge
-	url = https://github.com/INN/analytic-bridge.git
+	url = https://github.com/INN/Google-Analytics-Popular-Posts.git
 [submodule "wp-content/themes/midwestenergynews"]
 	path = wp-content/themes/midwestenergynews
 	url = https://bitbucket.org/projectlargo/theme-midwestenergynews.git
