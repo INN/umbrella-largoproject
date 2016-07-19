@@ -118,9 +118,6 @@
 [submodule "wp-content/themes/gijn-impact"]
 	path = wp-content/themes/gijn-impact
 	url = https://bitbucket.org/projectlargo/theme-gijn-impact.git
-[submodule "wp-content/plugins/news-quiz"]
-	path = wp-content/plugins/news-quiz
-	url = https://github.com/INN/news-quiz.git
 [submodule "wp-content/themes/voiceofoc"]
 	path = wp-content/themes/voiceofoc
 	url = https://bitbucket.org/projectlargo/theme-voice-of-oc.git
