@@ -22,9 +22,6 @@
 [submodule "wp-content/themes/midwestcenter"]
 	path = wp-content/themes/midwestcenter
 	url = https://bitbucket.org/projectlargo/theme-midwestcenter.git
-[submodule "wp-content/themes/necir"]
-	path = wp-content/themes/necir
-	url = https://bitbucket.org/projectlargo/theme-necir.git
 [submodule "wp-content/themes/oklahomawatch"]
 	path = wp-content/themes/oklahomawatch
 	url = https://bitbucket.org/projectlargo/theme-oklahomawatch.git
@@ -79,21 +76,12 @@
 [submodule "wp-content/themes/nmindepth"]
 	path = wp-content/themes/nmindepth
 	url = https://bitbucket.org/projectlargo/theme-nmindepth.git
-[submodule "wp-content/themes/teenvoices"]
-	path = wp-content/themes/teenvoices
-	url = https://bitbucket.org/projectlargo/theme-teenvoices.git
 [submodule "wp-content/themes/ctmirror"]
 	path = wp-content/themes/ctmirror
 	url = https://github.com/drywall/ctmirror.git
 [submodule "wp-content/themes/newsdesk"]
 	path = wp-content/themes/newsdesk
 	url = https://bitbucket.org/projectlargo/theme-newsdesk.git
-[submodule "wp-content/themes/lensnola"]
-	path = wp-content/themes/lensnola
-	url = https://bitbucket.org/projectlargo/theme-lensnola.git
-[submodule "wp-content/themes/nchealthnews"]
-	path = wp-content/themes/nchealthnews
-	url = https://bitbucket.org/projectlargo/theme-nchealthnews.git
 [submodule "wp-content/themes/insideenergy"]
 	path = wp-content/themes/insideenergy
 	url = https://bitbucket.org/projectlargo/theme-insideenergy.git
@@ -124,15 +112,9 @@
 [submodule "wp-content/themes/catalystchicago"]
 	path = wp-content/themes/catalystchicago
 	url = https://bitbucket.org/projectlargo/theme-chicago-catalyst.git
-[submodule "wp-content/themes/se-energy-news"]
-	path = wp-content/themes/se-energy-news
-	url = https://bitbucket.org/projectlargo/theme-se-energy-news.git
 [submodule "wp-content/plugins/dfp"]
 	path = wp-content/plugins/dfp
 	url = https://github.com/INN/DoubleClick-for-WordPress.git
-[submodule "wp-content/themes/publicsource"]
-	path = wp-content/themes/publicsource
-	url = https://bitbucket.org/projectlargo/theme-publicsource.git
 [submodule "wp-content/themes/ctmverticals"]
 	path = wp-content/themes/ctmverticals
 	url = https://bitbucket.org/projectlargo/theme-ctmirror-2.git
@@ -142,9 +124,6 @@
 [submodule "wp-content/themes/midwestenergynews"]
 	path = wp-content/themes/midwestenergynews
 	url = https://bitbucket.org/projectlargo/theme-midwestenergynews.git
-[submodule "wp-content/themes/hashtag30"]
-	path = wp-content/themes/hashtag30
-	url = https://bitbucket.org/projectlargo/theme-hashtag30.git
 [submodule "wp-content/themes/bigagwatch"]
 	path = wp-content/themes/bigagwatch
 	url = https://bitbucket.org/projectlargo/theme-bigagwatch.git
@@ -160,9 +139,6 @@
 [submodule "wp-content/plugins/documentcloud"]
 	path = wp-content/plugins/documentcloud
 	url = https://github.com/documentcloud/wordpress-documentcloud.git
-[submodule "wp-content/themes/sfpublicpress"]
-	path = wp-content/themes/sfpublicpress
-	url = https://bitbucket.org/projectlargo/theme-sfpublicpress.git
 [submodule "wp-content/plugins/term-debt-consolidator"]
 	path = wp-content/plugins/term-debt-consolidator
 	url = https://github.com/INN/term-debt-consolidator.git
@@ -172,9 +148,3 @@
 [submodule "wp-content/themes/mstoday"]
 	path = wp-content/themes/mstoday
 	url = https://bitbucket.org/projectlargo/theme-mstoday.git
-[submodule "wp-content/themes/shelterforce"]
-	path = wp-content/themes/shelterforce
-	url = https://bitbucket.org/projectlargo/theme-shelterforce.git
-[submodule "wp-content/themes/signcasts"]
-	path = wp-content/themes/signcasts
-	url = git@github.com:INN/theme-signcasts.git
