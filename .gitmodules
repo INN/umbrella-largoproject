@@ -18,7 +18,7 @@
 	url = https://bitbucket.org/projectlargo/theme-jjie.git
 [submodule "wp-content/themes/maine"]
 	path = wp-content/themes/maine
-	url = https://bitbucket.org/projectlargo/theme-maine.git
+	url = https://github.com/INN/theme-maine.git
 [submodule "wp-content/themes/midwestcenter"]
 	path = wp-content/themes/midwestcenter
 	url = https://bitbucket.org/projectlargo/theme-midwestcenter.git
@@ -33,7 +33,7 @@
 	url = https://bitbucket.org/projectlargo/theme-c-hit.git
 [submodule "wp-content/plugins/largo-extended"]
 	path = wp-content/plugins/largo-extended
-	url = https://bitbucket.org/projectlargo/largo-extended.git
+	url = https://github.com/INN/plugin-largo-extended.git
 [submodule "wp-content/themes/aspen"]
 	path = wp-content/themes/aspen
 	url = https://bitbucket.org/projectlargo/theme-aspen.git
@@ -69,7 +69,7 @@
 	url = https://bitbucket.org/projectlargo/theme-inews.git
 [submodule "wp-content/themes/kentucky"]
 	path = wp-content/themes/kentucky
-	url = https://bitbucket.org/projectlargo/theme-kycir.git
+	url = https://github.com/INN/theme-kycir.git
 [submodule "wp-content/themes/largoproject"]
 	path = wp-content/themes/largoproject
 	url = https://bitbucket.org/projectlargo/theme-largoproject.git
@@ -117,7 +117,7 @@
 	url = https://github.com/INN/DoubleClick-for-WordPress.git
 [submodule "wp-content/themes/ctmverticals"]
 	path = wp-content/themes/ctmverticals
-	url = https://bitbucket.org/projectlargo/theme-ctmirror-2.git
+	url = https://github.com/INN/theme-ctmverticals.git
 [submodule "wp-content/themes/nhindepth"]
 	path = wp-content/themes/nhindepth
 	url = https://bitbucket.org/projectlargo/theme-nhindepth.git
