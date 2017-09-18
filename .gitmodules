@@ -55,9 +55,6 @@
 [submodule "wp-content/themes/raleigh"]
 	path = wp-content/themes/raleigh
 	url = https://bitbucket.org/projectlargo/theme-raleigh.git
-[submodule "wp-content/plugins/argo-audio-player"]
-	path = wp-content/plugins/argo-audio-player
-	url = https://github.com/INN/argo-audio-player.git
 [submodule "wp-content/themes/chicago-reporter"]
 	path = wp-content/themes/chicago-reporter
 	url = https://bitbucket.org/projectlargo/theme-chicago-reporter.git
